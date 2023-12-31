@@ -1,0 +1,42 @@
+(defwidget powermenu []
+     (box :class "powermenu"
+          :orientation "v"
+          :space-evenly "false"
+          (lock-power-restart)))
+
+
+(defwidget lock-power-restart []
+	(box :class "powermenu"
+		 :orientation "h"
+		 :spacing 10
+    (eventbox :cursor "pointer"
+		(button :class "powermenu lock" 
+				:onclick "$HOME/.config/swaylock/launcher.sh; eww close powermenu"
+				:tooltip "Lock session"
+				""))
+    (eventbox :cursor "pointer"
+		(button :class "powermenu exit" 
+				:onclick "hyprctl dispatch exit" 
+				:tooltip "Logout hyprland"
+				""))
+    (eventbox :cursor "pointer"
+		(button :class "powermenu reboot" 
+				:onclick "systemctl reboot"
+				:tooltip "Restart"
+				""))
+    (eventbox :cursor "pointer"
+		(button :class "powermenu shutdown" 
+				:onclick "systemctl poweroff"
+				:tooltip "Shutdown"
+				""))     
+  )
+)
+
+;; Power Menu ;;
+(defwindow powermenu
+	:monitor 0
+    :geometry (geometry :x "0%"
+                        :y "0%"
+                        :anchor "center center")
+    (powermenu))
+    

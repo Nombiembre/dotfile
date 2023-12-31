@@ -1,0 +1,74 @@
+.date {
+  background-color: $bg;
+  color: $fg;
+  border-radius: .5rem;
+}
+
+.cal-box {
+  font-family: Iosevka Nerd Font;
+  font-weight: Bold;
+  font-size: 1.1rem;
+  background-color: $bg;
+  border-radius: .5rem;
+  padding: 0 1rem .2rem;
+  color: $fg;
+  margin: .6rem .6rem .6rem .6rem;
+
+  
+  .cal {
+    background-color: inherit;
+    padding: .5rem .15rem .2rem;
+    margin-left: 10px;
+
+    & > * {
+      border: solid 0px transparent;
+    }
+    
+    &.highlight {
+      padding: 10rem;
+    }
+  }
+}
+
+calendar:selected {
+  color: $green;
+  background-color: $white;
+}
+
+calendar.header {
+  color: $blue;
+  font-weight: bold;
+}
+
+calendar.button {
+  color: $blue;
+}
+
+calendar.highlight {
+  color: $dark-green;
+  font-weight: bold;
+}
+
+calendar:indeterminate {
+  color: $lightblack;
+}
+
+
+.alarm-box{
+  margin: 1rem 0;
+  
+  .alarm{
+    margin: 0 .4rem;
+    background-color: $bg-alt;
+    font-size: 1.7rem;
+    border-radius: 5rem;
+    padding-right: .5rem;
+    
+    transition: all .2s;
+  }
+
+  .alarm:hover{
+    background-color: $bg-hover;
+    color: black;
+  }
+}
