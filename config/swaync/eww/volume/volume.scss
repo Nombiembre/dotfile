@@ -1,0 +1,39 @@
+.label {
+  background-image: url('/home/michi/.config/eww/assets/volume.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100px;
+}
+
+.volume{
+  background-color: $bg;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.metric {
+  min-width: 150px;
+
+  .metric scale{
+    min-height: 20px;
+  }
+}
+.metric scale trough highlight {
+  all: unset;
+  border-radius: 1rem;
+  background-image: linear-gradient(
+    to right,
+    darken($color: $magenta, $amount: 15%),
+    $blue
+    )
+  }
+  
+  .metric scale trough {
+  all: unset;
+  background-color: rgba($fg, 0.3);
+  box-shadow: 0px 0px 2px 1px rgba(black, 0.5);
+  border-radius: 1rem;
+  min-height: 0.45rem;
+  margin: 0rem 0.2rem 0.2rem 0rem;
+}

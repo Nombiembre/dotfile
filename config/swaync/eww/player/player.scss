@@ -1,0 +1,90 @@
+.player {
+  font-family: "JetBrains Mono Medium", "Material Design Icons Desktop";
+  background-color: $bg;
+  padding: 0.6rem;
+  min-height: 12rem;
+  border-radius: 0.6rem;
+  padding: 2rem;
+  border: 1px solid $black;
+  
+  .player-art {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 0.3rem .2rem rgba(0,0,0, .3);
+    border-radius: inherit;
+    min-width: 15rem;
+    min-height: 15rem;
+  }
+
+  
+  .player-info {
+    border-radius: 1rem;
+    margin: 1rem 0 0 0;
+    
+    .player-title {
+      font-family: Iosevka Nerd Font;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $white;
+      text-shadow: 0 0 0.5rem rgba($color: black, $alpha: 1);
+    }
+
+    .player-artist {
+  font-family: Iosevka Nerd Font;
+  font-weight: bolder;
+  font-size: 1.2rem;
+      color: $fg;
+      text-shadow: 0 0 0.5rem rgba($color: black, $alpha: 1);
+    }
+
+    .player-bar scale trough highlight {
+      all: unset;
+      background-image: linear-gradient(
+        to right,
+        darken($color: $magenta, $amount: 15%),
+        $blue
+      );
+      border-radius: 2rem;
+    }
+
+    .player-bar scale trough {
+      all: unset;
+      background-color: rgba($fg, 0.3);
+      box-shadow: 0px 0px 2px 1px rgba(black, 0.5);
+      border-radius: 1rem;
+      min-height: 0.65rem;
+      margin: 0rem 0.2rem 0.2rem 0rem;
+    }
+
+    .player-position {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: $fg;
+    }
+  }
+
+  .player-controls {
+    
+    .player-previous,
+    .player-next,
+    .player-toggle {
+      font-size: 1.5rem;
+      min-height: 1.7rem;
+      min-width: 1.7rem;
+      color: $fg;
+      border-radius: 50%;
+      border: 1px solid $black;
+      padding: .5rem;
+      margin-bottom: .8rem;
+    }
+
+    button {
+      transition: color .2s;
+
+      &:hover {
+        color: $magenta;
+      }
+    }
+  }
+}

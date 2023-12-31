@@ -1,0 +1,40 @@
+.parent {
+    background-color: $bg;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.header {
+    font-weight: bold;
+    font-size: large;
+}
+
+.title {
+    margin-right: 50px;
+    margin-left: 1px;
+}
+
+.button {
+    margin-top: 8px;
+    background-color: $bg-alt;
+    border-radius: 8px;
+    padding: 8px;
+
+}
+
+.button:hover {
+    background-color: $bg-hover;
+    color: black;
+}
+
+.button:active {
+    background-color: #111;
+}
+
+.exit:hover {
+    color: #f66;
+}
+
+.exit, .button {
+    transition: all 0.2s ease;
+}

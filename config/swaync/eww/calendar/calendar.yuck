@@ -1,0 +1,30 @@
+
+(defwidget cal []
+  (box :class "cal-box"
+       :orientation "v"
+       :space-evenly false
+    (calendar :class "cal"
+              :day {formattime(EWW_TIME, "%d")}
+              :month {formattime(EWW_TIME, "%m")}
+              :year {formattime(EWW_TIME, "%Y")}
+  )
+  
+  (box :orientation "h"
+       :class "alarm-box"
+       :space-evenly true
+       :spacing 40
+        (eventbox :cursor "pointer"
+						 (button :class "alarm"
+								 :tooltip "Open alarm"
+								 :onclick "OpenApps --alarm" "󰀠"))
+         ))
+)
+
+;; Windows ;;
+(defwindow date
+  :monitor 0
+  :geometry (geometry :x "20px"
+                      :y "10px"
+                      :anchor "top right"
+                      :width "300px")
+(cal))

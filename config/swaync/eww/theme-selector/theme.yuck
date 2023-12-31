@@ -1,0 +1,115 @@
+
+(defwidget themeMenu []
+    (box 
+        :class "body" 
+        :space-evenly "false" 
+        :orientation "v"
+            (box 
+                :active "true"
+                :class "main" 
+                :space-evenly "true"
+                :spacing 24
+                (eventbox
+                    :cursor "pointer"
+                    :class "theme-item"
+                    :onclick "/home/michi/.config/eww/theme-selector/script.sh dark-blue"
+                        (box
+                            :orientation "v"
+                            :space-evenly "false"
+                            :class "theme-item"
+                                (button 
+                                :class "theme-img"
+                                :style "background-image: url('/home/michi/.config/eww/theme-selector/assets/theme1.png');"
+                                :onclick "/home/michi/.config/eww/theme-selector/script.sh dark-blue")
+                                (label :text "Dark blue")))
+                (eventbox
+                    :cursor "pointer"
+                    :class "theme-item"
+                    :onclick "/home/michi/.config/eww/theme-selector/script.sh dark-mode"
+                        (box
+                            :orientation "v"
+                            :space-evenly "false"
+                            :class "theme-item"                
+                                (button 
+                                    :onclick "/home/michi/.config/eww/theme-selector/script.sh dark-mode"
+                                    :style "background-image: url('/home/michi/.config/eww/theme-selector/assets/theme2.png');"
+                                    :class "theme-img theme2"
+                                    )
+                                (label :text "Black")))
+                (eventbox
+                    :cursor "pointer"
+                    :class "theme-item"
+                    :onclick "/home/michi/.config/eww/theme-selector/script.sh surface"
+                        (box
+                            :orientation "v"
+                            :space-evenly "false"
+                            :class "theme-item"                
+                                (button 
+                                    :style "background-image: url('/home/michi/.config/eww/theme-selector/assets/theme3.png');"
+                                    :class "theme-img theme2"
+                                    :onclick "/home/michi/.config/eww/theme-selector/script.sh surface")
+                                (label :text "The Surface"
+                                       :valign "center")))
+            )
+            (box 
+                :active "true"
+                :class "main" 
+                :space-evenly "true"
+                :spacing 24
+                (eventbox
+                    :cursor "pointer"
+                    :class "theme-item"
+                    :onclick "/home/michi/.config/eww/theme-selector/script.sh sunshine"
+                        (box
+                            :orientation "v"
+                            :space-evenly "false"
+                            :class "theme-item"                
+                                (button 
+                                    :style "background-image: url('/home/michi/.config/eww/theme-selector/assets/theme4.png');"
+                                    :class "theme-img theme2"
+                                    :onclick "/home/michi/.config/eww/theme-selector/script.sh sunshine")
+                                (label :text "Sunshine"
+                                       :valign "center")))
+                 (eventbox
+                    :cursor "pointer"
+                    :class "theme-item"
+                    :onclick "/home/michi/.config/eww/theme-selector/script.sh decay"
+                        (box
+                            :orientation "v"
+                            :space-evenly "false"
+                            :class "theme-item"                
+                                (button 
+                                    :style "background-image: url('/home/michi/.config/eww/theme-selector/assets/theme6.png');"
+                                    :class "theme-img theme2"
+                                    :onclick "/home/michi/.config/eww/theme-selector/script.sh decay")
+                                (label :text "Color Decay"
+                                       :valign "center")))
+                 (eventbox
+                    :cursor "pointer"
+                    :class "theme-item"
+                    :onclick "/home/michi/.config/eww/theme-selector/script.sh celeste"
+                        (box
+                            :orientation "v"
+                            :space-evenly "false"
+                            :class "theme-item"                
+                                (button 
+                                    :style "background-image: url('/home/michi/.config/eww/theme-selector/assets/theme5.png');"
+                                    :class "theme-img theme2"
+                                    :onclick "/home/michi/.config/eww/theme-selector/script.sh celeste")
+                                (label :text "Celeste"
+                                       :valign "center")))
+               
+            )
+    )
+)
+
+
+
+(defwindow theme-selector
+    :monitor 0
+    :geometry
+    (geometry :anchor "center center"
+              :x "5%"
+              :y "10px"
+              :width "45%"
+        )    (themeMenu))           
